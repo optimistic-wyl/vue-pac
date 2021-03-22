@@ -53,7 +53,7 @@
                 } else {
                     // 完全加载完毕的事件
                     img.onload = function() {
-                    callback(img.width, img.height)
+                     callback(img.width, img.height)
                     }
                 }
             }

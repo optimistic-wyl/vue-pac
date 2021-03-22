@@ -10,6 +10,8 @@ Vue.use(Row)
 Vue.use(Col) */
 Vue.config.productionTip = false
 
-new Vue({
+const v = new Vue({
   render: h => h(App),
 }).$mount('#app')
+
+console.log(v.$options.render)
