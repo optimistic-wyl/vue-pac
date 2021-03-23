@@ -18,7 +18,8 @@
         </el-menu>
       </el-col>
       <el-col :span='22'>
-
+        <a href="/">Home</a> | <a href="/detail">detail</a>
+        <router-view></router-view>
       </el-col>
     </el-row>
   </div>
