@@ -22,15 +22,18 @@ import 'element-ui/lib/theme-chalk/index.css'
 // import { Button, Row, Col } from 'element-ui'
 import App from "./App.vue";
 import { createRouter } from "./router";
+import { createStore } from "./store"
 // 导出Vue实例⼯⼚函数，为每次请求创建独⽴实例
 // 上下⽂⽤于给vue实例传递参数
 export function createApp(context) {
   const router = createRouter();
+  const store = createStore()
   Vue.use(ElementUI)
   const app = new Vue({
     router,
     context,
+    store,
     render: h => h(App)
   });
-  return { app, router };
+  return { app, router, store };
 }

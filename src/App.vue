@@ -19,6 +19,9 @@
       </el-col>
       <el-col :span='22'>
         <a href="/">Home</a> | <a href="/detail">detail</a>
+        <span @click="$store.commit('add', 5)">{{$store.state.counter}}</span>
+        <span>{{$store.getters.doubleCounter}}</span>
+        <span>======={{$store.state}}</span>
         <router-view></router-view>
       </el-col>
     </el-row>
